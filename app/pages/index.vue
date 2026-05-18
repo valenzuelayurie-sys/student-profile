@@ -46,24 +46,68 @@
 
               <v-col 
               cols="12"
-              md="6">
+              md="4">
+                <v-combobox
+                  label=" COURSE "
+                  variant="outlined"
+                  :items="['BSCS','BSIT']"
+                  clearable>
+                </v-combobox>
+              </v-col>
+                
+              <v-col 
+              cols="12"
+              md="4">
+                <v-combobox
+                  label=" YEAR "
+                  variant="outlined"
+                  :items="['1st year','2nd year','3rd year','4th year']"
+                  clearable>
+                </v-combobox>
+              </v-col>
+
+              <v-col 
+              cols="12"
+              md="4">
+                <v-combobox
+                  label=" SECTION "
+                  variant="outlined"
+                  :items="['A','B','C']"
+                  clearable>
+                </v-combobox>
+              </v-col>
+
+              <v-col 
+              cols="12"
+              md="4">
+                <v-text-field
+                  label=" ADDRESS "
+                  variant="solo-inverted"
+                  placeholder="BARANGAY SAN AGUSTIN">
+                </v-text-field>
+              </v-col>
+
+              <v-col 
+              cols="12"
+              md="4">
+                <v-text-field
+                  label=" CONTACT No, "
+                  variant="solo-inverted"
+                  placeholder="0921241547">
+                </v-text-field>
+              </v-col>
+
+              <v-col 
+              cols="12"
+              md="4">
                 <v-combobox
                   label=" GENDER "
                   variant="outlined"
-                  :items="['MALE','FEMALE','PREFERED NOT SAY']"
+                  :items="['MALE','FENALE','LGBTQ+A']"
                   clearable>
                 </v-combobox>
-                </v-col>
-                
-                    <v-col 
-              cols="12"
-              md="6">
-                 <v-text-field
-                  label=" AGE "
-                  variant="outlined"
-                   placeholder="18+">
-                </v-text-field>
               </v-col>
+          
             </v-row>
             
             <v-btn
