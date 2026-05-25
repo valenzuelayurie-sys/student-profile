@@ -2,10 +2,19 @@
     <v-app>
         <v-navigation-drawer v-model="drawer">
             <v-list>
+
+                 <v-list-item
+                    prepend-icon="mdi-view-dashboard"
+                    title="Dashboard"
+                    value="dashboard"
+                    to="/"
+                ></v-list-item>
+
                 <v-list-item
                     prepend-icon="mdi-account-plus"
                     title="Add Student"
                     value="addstud"
+                    to="addstudent"
                 ></v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -15,7 +24,7 @@
                 @click="drawer = !drawer"
             ></v-app-bar-nav-icon>
 
-            <v-app-bar-titte>Student Management</v-app-bar-titte>
+            <v-app-bar-title>Student Management</v-app-bar-title>
         </v-app-bar>
 
         <v-main>
@@ -25,7 +34,7 @@
 </template>
 
 <script>
-    import { ref } from 'vue';
+    import { ref } from 'vue'
 
     export default {
         data: () => ({ drawer: null}),

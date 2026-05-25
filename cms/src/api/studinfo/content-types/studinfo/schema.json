@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "studinfos",
+  "info": {
+    "singularName": "studinfo",
+    "pluralName": "studinfos",
+    "displayName": "Studinfo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "studno": {
+      "type": "string"
+    },
+    "lname": {
+      "type": "string"
+    },
+    "fname": {
+      "type": "string"
+    },
+    "mname": {
+      "type": "string"
+    },
+    "course": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "biginteger"
+    },
+    "gender": {
+      "type": "string"
+    }
+  }
+}
