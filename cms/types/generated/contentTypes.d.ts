@@ -249,6 +249,7 @@ export interface AdminSession extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'admin::session'> &
       Schema.Attribute.Private;
+    metadata: Schema.Attribute.JSON & Schema.Attribute.Private;
     origin: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Private;
@@ -440,12 +441,12 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiStudinfoStudinfo extends Struct.CollectionTypeSchema {
-  collectionName: 'studinfos';
+export interface ApiStudInfoStudInfo extends Struct.CollectionTypeSchema {
+  collectionName: 'stud_infos';
   info: {
-    displayName: 'Studinfo';
-    pluralName: 'studinfos';
-    singularName: 'studinfo';
+    displayName: 'StudInfo';
+    pluralName: 'stud-infos';
+    singularName: 'stud-info';
   };
   options: {
     draftAndPublish: true;
@@ -463,7 +464,7 @@ export interface ApiStudinfoStudinfo extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::studinfo.studinfo'
+      'api::stud-info.stud-info'
     > &
       Schema.Attribute.Private;
     mname: Schema.Attribute.String;
@@ -988,7 +989,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::studinfo.studinfo': ApiStudinfoStudinfo;
+      'api::stud-info.stud-info': ApiStudInfoStudInfo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

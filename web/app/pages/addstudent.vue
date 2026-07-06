@@ -1,231 +1,327 @@
-  <template>
-    <v-app> 
-      <v-main>
-        <v-container>
+studinfos<template>
+    <v-app>
+        <v-main>
+            <v-container>
+                <v-row>
+                    <v-col
+                        cols="12"
+                        md="12"
+                    >
+                        <v-text-field
+                        label="Student No."
+                        prepend-inner-icon="mdi-numeric"
+                        variant="outlined"
+                        v-model="student.studno"
+                        ></v-text-field>
+                    </v-col>
 
-            <v-row>
-              <v-col
-              cols="12"
-              >
-                  <v-text-field
-                  label=" STUDENT NO "
-                  prepend-inner-icon="mdi mdi-account-circle"
-                  variant="solo-inverted"
-                  placeholder="24-00611">
-                </v-text-field>
-              </v-col>
+                    <v-col
+                       cols="12"
+                       md="4"   
+                    >
+                        <v-text-field
+                        label="Last Name "
+                        prepend-inner-icon="mdi-account-box-outline"
+                        variant="outlined"
+                        v-model="student.lname"
+                        ></v-text-field>
+                    </v-col>
 
-              <v-col
-              cols="12"
-              md="4">
-                  <v-text-field
-                  label=" LAST NAME "
-                  prepend-inner-icon="mdi mdi-account-box-outline"
-                  variant="solo-inverted"
-                  placeholder="VALENZUELA">
-                </v-text-field>
-              </v-col>
-            
-              <v-col
-              cols="12"
-              md="4">
-                  <v-text-field
-                  label=" FIRST NAME "
-                  prepend-inner-icon="mdi mdi-account-box-outline"
-                  variant="solo-inverted"
-                  placeholder="YURIE">
-                </v-text-field>
-              </v-col>
-          
-              <v-col 
-              cols="12"
-              md="4">
-                <v-text-field
-                  label=" MIDDLE NAME "
-                  prepend-inner-icon="mdi mdi-account-box-outline"
-                  variant="solo-inverted"
-                  placeholder="BAYA">
-                </v-text-field>
-              </v-col>
+                    <v-col
+                       cols="12"
+                       md="4"   
+                    >
+                        <v-text-field
+                        label="First Name "
+                        prepend-inner-icon="mdi-account-box-outline"
+                        variant="outlined"
+                        v-model="student.fname"
+                        ></v-text-field>
+                    </v-col>
 
-              <v-col 
-              cols="12"
-              md="4">
-                <v-combobox
-                  label=" COURSE "
-                  prepend-inner-icon="mdi mdi-account-details-outline"
-                  variant="outlined"
-                  :items="['BSCS','BSIT']"
-                  clearable>
-                </v-combobox>
-              </v-col>
-                
-              <v-col 
-              cols="12"
-              md="4">
-                <v-combobox
-                  label=" YEAR "
-                  prepend-inner-icon="mdi mdi-account-details-outline"
-                  variant="outlined"
-                  :items="['1st year','2nd year','3rd year','4th year']"
-                  clearable>
-                </v-combobox>
-              </v-col>
+                    <v-col
+                       cols="12"
+                       md="4"   
+                    >
+                        <v-text-field
+                        label="Middle Name "
+                        prepend-inner-icon="mdi-account-box-outline"
+                        variant="outlined"
+                        v-model="student.mname"
+                        ></v-text-field>
+                    </v-col>
 
-              <v-col 
-              cols="12"
-              md="4">
-                <v-combobox
-                  label=" SECTION "
-                  prepend-inner-icon="mdi mdi-account-details-outline"
-                  variant="outlined"
-                  :items="['A','B','C']"
-                  clearable>
-                </v-combobox>
-              </v-col>
+                    <v-col
+                       cols="12"
+                       md="4" 
+                    >
+                        <v-combobox
+                        label="Course"
+                         prepend-inner-icon="mdi-account-details-outline"
+                        :items="['BSCS', 'DCT']"
+                        variant="outlined"
+                         v-model="student.course"
+                        ></v-combobox>
+                    </v-col>
 
-              <v-col 
-              cols="12"
-              md="4">
-                <v-text-field
-                  label=" ADDRESS "
-                  prepend-inner-icon="mdi mdi-map-marker-account"
-                  variant="solo-inverted"
-                  placeholder="BARANGAY SAN AGUSTIN">
-                </v-text-field>
-              </v-col>
+                     <v-col
+                       cols="12"
+                       md="4" 
+                    >
+                        <v-combobox
+                        label="Year"
+                         prepend-inner-icon="mdi-account-details-outline"
+                        :items="['1st year', '2nd year', '3rd year', '4th year']"
+                        variant="outlined"
+                        v-model="student.year"
+                        ></v-combobox>
+                    </v-col>
 
-              <v-col 
-              cols="12"
-              md="4">
-                <v-text-field
-                  label=" CONTACT No, "
-                  prepend-inner-icon="mdi mdi-card-account-details"
-                  variant="solo-inverted"
-                  placeholder="0921241547">
-                </v-text-field>
-              </v-col>
+                     <v-col
+                       cols="12"
+                       md="4" 
+                    >
+                        <v-combobox
+                        label="Section"
+                         prepend-inner-icon="mdi-account-details-outline"
+                        :items="['A', 'B' , 'C' , 'D']"
+                        variant="outlined"
+                        v-model="student.section"
+                        ></v-combobox>
+                    </v-col>
 
-              <v-col 
-              cols="12"
-              md="4">
-                <v-combobox
-                  label=" GENDER "
-                  prepend-inner-icon="mdi mdi-gender-transgender"
-                  variant="outlined"
-                  :items="['MALE','FENALE','LGBTQ+A']"
-                  clearable>
-                </v-combobox>
-              </v-col>
-          
-            </v-row>
-            
-            <v-btn
-                prepend-icon="mdi mdi-tag-edit-outline"
-                variant="outlined"
-                color="green"
-              >EDIT
-            </v-btn>
+                     <v-col
+                       cols="12"
+                       md="4"   
+                    >
+                        <v-text-field
+                        label="Address "
+                        prepend-inner-icon="mdi-card-account-details-outline"
+                        variant="outlined"
+                        v-model="student.address"
+                        ></v-text-field>
+                    </v-col>
 
-              <v-btn
-                prepend-icon="mdi mdi-update"
-                variant="outlined"
-                color="blue"
-              >UPDATE
-            </v-btn>
-            
-              <v-btn
-                prepend-icon="mdi mdi-content-save-all-outline"
-                variant="outlined"
-                color="orange"
-              >SAVE
-            </v-btn>
+                     <v-col
+                       cols="12"
+                       md="4"   
+                    >
+                        <v-text-field
+                        label="Contact No "
+                        prepend-inner-icon=" mdi-card-account-phone-outline"
+                        variant="outlined"
+                        v-model="student.contact"
+                        ></v-text-field>
+                    </v-col>
 
-              <v-btn
-                prepend-icon="mdi mdi-delete-alert-outline"
-                variant="outlined"
-                color="red"
-              >DELETE
+                     <v-col
+                       cols="12"
+                       md="4" 
+                    >
+                        <v-combobox
+                        label="Gender"
+                         prepend-inner-icon="mdi-gender-transgender"
+                        :items="['Male', 'Female' , 'LGBTQ']"
+                        variant="outlined"
+                        v-model="student.gender"
+                        ></v-combobox>
+                    </v-col>
+                    
+                </v-row>
 
-            </v-btn>
+                        <v-btn
+                        color="green"
+                        size="small"
+                        variant="outlined"
+                        @click="saveStudent"
+                        >
+                            Save
+                        </v-btn>
 
-             <v-card
-              title="Student Profile"
-              flat
-            >
-              <template v-slot:text>
-                <v-text-field
-                  v-model="hanapstudent"
-                  label="Search"
-                  prepend-inner-icon="mdi-magnify"
-                  variant="outlined"
-                  hide-details
-                  single-line
-                ></v-text-field>
-              </template>
+                         <v-btn
+                        color="blue"
+                        size="small"
+                        variant="outlined"
+                        >
+                            Edit
+                        </v-btn>
 
-              <v-data-table
-                :headers="titlecolumn"
-                :items="nilalamanngcolumn"
-                :search="hanapstudent"
-              ></v-data-table>
-            </v-card>
+                        <v-btn
+                        color="orange"
+                        size="small"
+                        variant="outlined"
+                        >
+                            Update
+                        </v-btn>
 
+                         <v-btn
+                        color="red"
+                        size="small"
+                        variant="outlined"
+                        @click="deleteStudent"
+                        >
+                            Delete
+                        </v-btn>
 
+                         <v-card
+                            title="Student Profile"
+                            flat
+                        >
+                              <v-text-field
+                                v-model="hanapstudent"
+                                label="Search"
+                                prepend-inner-icon="mdi-magnify"
+                                variant="outlined"
+                                hide-details
+                                single-line
+                            ></v-text-field>
 
-        </v-container>
-      </v-main>
+                            <v-data-table
+                                :headers="[
+                                    { title: 'Student No.', key: 'studno' },
+                                    { title: 'Last Name', key: 'lname' },
+                                    { title: 'First Name', key: 'fname' },
+                                    { title: 'Middle Name', key: 'mname' },
+                                    { title: 'Course', key: 'course' },
+                                    { title: 'Year', key: 'year' },
+                                    { title: 'Section', key: 'section' },
+                                    { title: 'Address', key: 'address' },
+                                    { title: 'Contact No.', key: 'contact' },
+                                    { title: 'Gender', key: 'gender'}
+                                ]"
+                                :items="students.map(item => item)"
+                                :search="hanapstudent"
+                                @click:row="(event, row) => selectStudent(row.item)"
+                            />
+                        </v-card>
+            </v-container>
+        </v-main>
     </v-app>
-  </template>
+</template>
 
-  <script setup>
-    const hanapstudent = ref('')
 
-   const titlecolumn = [
-  {
-    key: 'studno', title: 'Student number'
-  },
-  {
-    key: 'lname', title: 'Last name'
-  },
-  {
-    key: 'fname', title: 'First name'
-  },
-  {
-    key: 'mname', title: 'Middle name'
-  },
-  {
-    key: 'course', title: 'Course'
-  },
-  {
-    key: 'section', title: 'Section'
-  },
-  {
-    key: 'address', title: 'Address'
-  },
-  {
-    key: 'contact', title: 'Contact'
-  },
-  {
-    key: 'gender', title: 'Gender'
-  },
-]
+<script setup>
+import { ref, onMounted } from 'vue'
 
-const nilalamanngcolumn = [
-  {
-     studno: '2400611',
-     lname: 'valenzuela',
-     fname: 'yurie',
-     mname: 'baya',
-     course: 'DCT',
-     year: '2nd year',
-     section: '2B',
-     address: 'barangay san agustin',
-     contact: '09929817572',
-     gender: 'male',
+const config = useRuntimeConfig()
 
-  }
-]
+   const student = ref({
+    studno: '',
+    lname: '',
+    fname: '',
+    mname: '',
+    course: '',
+    year: '',
+    section: '',
+    address: '',
+    contact: '',
+    gender  : '',
+   })
 
-  </script>
+   const students = ref([])
+
+   //search function
+   const hanapstudent = ref('')
+
+   // Function to save student information to Strapi
+   const saveStudent = async () => {
+    try {
+        const response = await $fetch(
+            `${config.public.strapiUrl}/api/stud-infos`,
+            {
+                method: 'POST',
+                body: {
+                    data: student.value
+                }
+            }
+        )
+            console.log(response)
+
+            alert('Student information saved successfully!')
+
+            clearForm()
+
+            getStudents()
+    } catch (error) {
+    console.error('Error saving student information:', error)
+    alert('Failed to save student information. Please try again.')
+   }
+   } 
+
+   //function to get student information from Strapi
+   const getStudents = async () => {
+    try {
+         const response = await $fetch(
+            `${config.public.strapiUrl}/api/stud-infos`,
+            )
+            students.value = response.data
+    } catch (error) {
+        console.error('Error fetching student information:', error)
+        alert('Failed to fetch student information. Please try again.')
+    }
+   }
+
+   //clear form after saving
+    const clearForm = () => {
+     student.value = {
+           studno: '',
+    lname: '',
+    fname: '',
+    mname: '',
+    course: '',
+    year: '',
+    section: '',
+    address: '',
+    contact: '',
+    gender  : '',
+     }
+    }
+
+    //select ID from strapi table
+    const selectedDocumentId = ref(null)
+
+    //select data from datatable to text field
+    const selectStudent = (item) => {
+    selectedDocumentId.value = item.documentId
+
+    student.value = {
+        studno: item.studno,
+        lname: item.lname,
+        fname: item.fname,
+        mname: item.mname,
+        course: item.course,
+        year: item.year,
+        section: item.section,
+        address: item.address,
+        contact: item.contact,
+        gender: item.gender,
+    }
+    }
+
+    //delete function
+    const deleteStudent = async () => {
+    if (!selectedDocumentId.value) {
+        alert('Please select a student first.')
+        return
+    }
+
+    try {
+        await $fetch(`${config.public.strapiUrl}/api/stud-infos/${selectedDocumentId.value}`, {
+        method: 'DELETE'
+        })
+
+        alert('Student deleted successfully!')
+        clearForm()
+        selectedDocumentId.value = null
+        getStudents()
+    } catch (error) {
+        console.error(error)
+        alert('Failed to delete student.')
+    }
+    }
+
+    onMounted(() => {
+        getStudents()
+    })
+</script>
 

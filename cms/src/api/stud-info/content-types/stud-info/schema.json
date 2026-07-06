@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "studinfos",
+  "collectionName": "stud_infos",
   "info": {
-    "singularName": "studinfo",
-    "pluralName": "studinfos",
-    "displayName": "Studinfo"
+    "singularName": "stud-info",
+    "pluralName": "stud-infos",
+    "displayName": "StudInfo"
   },
   "options": {
     "draftAndPublish": true
